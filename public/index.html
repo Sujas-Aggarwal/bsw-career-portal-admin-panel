@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Career Portal | Admin Panel</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="apple-touch-icon" href="./assets/logo.png">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="popover-container">
+      <div class="popover-wrapper">
+        <h3>Enter The Name of Profile</h3>
+        <input spellcheck="false" type="text" placeholder="Profile Name" class="add-profile-input" />
+        <div class="btn-popover-container">
+          <button class="close-popover-btn">Cancel</button>
+          <button class="create-profile-btn">Create Profile</button>
+        </div>
+      </div>
+    </div>
     <div class="main-container">
       <div class="sidebar">
-        <button class="add-profile-btn" style="background-color: var(--primary-color); color: white">
+        <button
+          class="add-profile-btn"
+          style="background-color: var(--primary-color); color: white"
+        >
           Add Profile
         </button>
         <img

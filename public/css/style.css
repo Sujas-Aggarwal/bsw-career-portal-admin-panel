@@ -41,6 +41,16 @@ button {
   background: white;
   color: black;
 }
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .main{
+    height: auto;
+    max-height: fit-content;
+  }
+}
 .main-container > .sidebar {
   min-width: 200px;
   height: 100%;
@@ -97,26 +107,72 @@ textarea {
   border: none;
   color: black;
 }
-.buttons-main{
-    display: flex;
-    justify-content:start;
-    align-items: center;
-    gap: 10px;
+.buttons-main {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
 }
-.buttons-main>button{
-    padding: 8px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
+.buttons-main > button {
+  padding: 8px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
 }
-.buttons-main>button:first-child{
-    background: var(--danger-color);
+.buttons-main > button:first-child {
+  background: var(--danger-color);
 }
-.buttons-main>button:first-child:hover{
-    background: #79111b;
+.buttons-main > button:first-child:hover {
+  background: #79111b;
 }
-.buttons-main>button:nth-child(2):hover{
-    background: #0056b3;
+.buttons-main > button:nth-child(2):hover {
+  background: #0056b3;
+}
+/* Popover CSS */
+.popover-container {
+  position: fixed;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popover-wrapper {
+  width: 600px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(90, 90, 90, 0.338) 0px 0px 10px;
+}
+.popover-wrapper > input {
+  box-shadow: rgba(67, 67, 67, 0.043) 0px 0px 10px;
+  min-height: 40px;
+  padding: 10px;
+  background: white;
+  outline: none;
+  border-radius: var(--border-radius);
+  border: none;
+  color: black;
+  margin-bottom: 10px;
+}
+.popover-wrapper button{
+  padding: 8px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.popover-wrapper button:first-child {
+  background: var(--danger-color);
 }
